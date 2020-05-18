@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1> Hello World! </h1>
+
+<h2> This is an HTML file with JavaScript added. </h2>
+
+<img id="myImage" src="JavaScript-logo.png" width="200" height="180">
+
+<p id="demo">This is an example sentance!</p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").style.fontSize = "30px"; 
+  document.getElementById("demo").style.color = "green";
+  document.getElementById("demo").style.backgroundColor = "black";        
+}
+
+function apple() {
+  document.getElementById("demo").style.fontSize = "16px";
+  document.getElementById("demo").style.color = "black";
+  document.getElementById("demo").style.removeProperty("background-Color");
+  document.getElementById("demo").innerHTML = "This is an example sentance!";
+}
+
+function spam() {
+  document.getElementById("demo").innerHTML = "This is an inserted Javascript sentance";
+}
+
+function crabs(yesorno) {
+  if (yesorno == 0){
+    pic = "JavaScript-logo.png"
+  } else {
+    pic = "crabs.jpg"
+  }
+  document.getElementById("myImage").src = pic;
+}
+
+function back() {
+  document.body.style.background = "gray";
+}
+
+function back2() {
+  document.body.style.background = "white";
+
+}
+
+function backall(){
+  document.body.style.background = "white";
+  crabs(0);
+  document.getElementById("demo").innerHTML = "This is an inserted Javascript sentance";
+  apple();  
+}
+
+
+</script>
+
+<noscript>Sorry your browser doesn't support JavaScript</noscript>
+
+<button type="button" onclick="spam()">Change the words
+<button type="button" onclick="myFunction()">Change The Style!</button>
+<button type="button" onclick="apple()">Change it back!</button>
+<button type="button" onclick="crabs(1)">Crab Attack!</button>
+<button type="button" onclick="crabs(0)">Original!</button>
+<button type="button" onclick="back()">Change the Background!</button>
+<button type="button" onclick="back2()">Change it Back!</button>
+
+<p></P>
+
+<button type="button" onclick="backall()">Change everything Back!</button>
+
+<p></p>
+<button onclick="window.location.href='page2.html';"> Next Page </button>
+
+
+</body>
+</html>
